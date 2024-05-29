@@ -1,0 +1,9 @@
+read_verilog mips.v
+hierarchy -check -top mips
+proc
+flatten
+synth
+opt
+abc -g AND
+clean
+write_ilang mips.il
